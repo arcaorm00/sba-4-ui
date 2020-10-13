@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 const Main = () => <>
     <BrowserRouter>
         <div className="main">
-            <switch>
+            <Switch>
                 <Route exact path="/" component={Home}/> 
                 <Route path="/about" component={About}/>
                 <Redirect from={"/history"} to={"/about/history"}/>
@@ -16,7 +16,7 @@ const Main = () => <>
                 <Route path="/events" component={Events}/>
                 <Route path="/products" component={Products}/>
                 <Route component={Error}/>
-            </switch>
+            </Switch>
         </div>
     </BrowserRouter>
 </>
